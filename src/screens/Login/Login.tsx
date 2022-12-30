@@ -29,7 +29,7 @@ const Login: React.FC = () => {
 
                         <ButtonSocialGoogle title="Google" />
 
-                        <ButtonSocialFacebook title="Facebook" />
+                        <ButtonSocialFacebook title="Facebook" iconName="facebook" />
 
                     </ViewButton>
 

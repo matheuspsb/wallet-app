@@ -12,6 +12,7 @@
     "@expo-google-fonts/dm-sans": "^0.2.2",
     "@expo-google-fonts/dm-serif-display": "^0.2.2",
     "@expo-google-fonts/poppins": "^0.2.2",
+    "@expo/vector-icons": "^13.0.0",
     "@types/react": "~18.0.24",
     "@types/react-native": "~0.70.6",
     "expo": "~47.0.9",
