@@ -4,6 +4,7 @@ import { SafeAreaView, Text } from "react-native";
 import { useTheme } from "styled-components/native";
 
 import Input from '../../components/Input/Input'
+import { Button } from '../../components/Button'
 import { ButtonSocialGoogle } from "../../components/ButtonSocialGoogle/ButtonSocial";
 import { ButtonSocialFacebook } from "../../components/ButtonSocialFacebook/ButtonSocialFacebook"
 import {
@@ -42,6 +43,7 @@ const Login: React.FC = () => {
                 </ContentHeader>
 
                 <ContentBody>
+
                     <Input
                         LeftIcon
                         iconSize={25}
@@ -54,6 +56,11 @@ const Login: React.FC = () => {
                         RightIcon
                         iconName='lock-closed-outline'
                         placeholder="Digite sua senha"
+                    />
+
+                    <Button
+                        title='Entrar'
+                        onPress={() => {}}
                     />
 
                 </ContentBody>

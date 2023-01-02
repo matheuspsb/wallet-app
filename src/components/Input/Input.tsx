@@ -44,6 +44,7 @@ const Input: React.FC<InputProps & TextInputProps > = ({ RightIcon, LeftIcon, ic
                     style={{ padding: 5 }}
                 />
             )}
+
         </Container>
     )
 }
