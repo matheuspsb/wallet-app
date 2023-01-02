@@ -2,6 +2,8 @@ import React from "react";
 
 import { SafeAreaView, Text } from "react-native";
 
+import Input from "../../components/Input_old/index";
+
 import { ButtonSocialGoogle } from "../../components/ButtonSocialGoogle/ButtonSocial";
 import { ButtonSocialFacebook } from "../../components/ButtonSocialFacebook/ButtonSocialFacebook"
 import {
@@ -36,6 +38,12 @@ const Login: React.FC = () => {
                 </ContentHeader>
 
                 <ContentBody>
+
+                    <Input
+                        iconName={'mail'}
+                        name="email"
+                        placeholder="Seu e-mail"
+                    />
 
                 </ContentBody>
 
