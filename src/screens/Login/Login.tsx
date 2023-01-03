@@ -15,6 +15,12 @@ import {
     Title,
     Description,
     ViewButton,
+    ButtonSingup,
+    TitleButtonSignUp1,
+    TitleButtonSignUp2,
+    ContentForgotPassword,
+    ContentButtonForgotPassword,
+    ContentTitleForgotPassword,
 } from './styles'
 
 
@@ -75,6 +81,12 @@ const Login: React.FC = () => {
                         placeholder="Digite sua senha"
                     />
 
+                    <ContentForgotPassword>
+                        <ContentButtonForgotPassword onPress={() => {}}>
+                            <ContentTitleForgotPassword>Recuperar Senha</ContentTitleForgotPassword>
+                        </ContentButtonForgotPassword>
+                    </ContentForgotPassword>
+
                     <Button
                         title='Entrar'
                         variant="primary"
@@ -85,7 +97,10 @@ const Login: React.FC = () => {
                 </ContentBody>
 
                 <ContentFooter>
-                    <Text style={{ marginTop: 220 }}>Created by Matheus Paulo</Text>
+                    <ButtonSingup onPress={() => {}}>
+                        <TitleButtonSignUp1>Não tem cadastro ainda?</TitleButtonSignUp1>
+                        <TitleButtonSignUp2>Cadastre-se</TitleButtonSignUp2>
+                    </ButtonSingup>
                 </ContentFooter>
 
             </Container>
