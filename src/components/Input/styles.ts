@@ -4,7 +4,7 @@ export const Container = styled.View`
     margin-top: 10px;
 
     width: 100%;
-    height: 50px;
+    height: 60px;
 
     padding: 0 12px;
 
@@ -20,7 +20,7 @@ export const Container = styled.View`
 export const InputContainer = styled.TextInput`
     flex: 1;
 
-    height: 45px;
+    height: 50px;
 
     border: 0;
     border-radius: 8px;

@@ -1,6 +1,4 @@
-import { useTheme } from "styled-components";
-
-const { COLORS } = useTheme();
+import theme from '../../styles/theme'
 
 interface ButtonStyle {
     button: {
@@ -18,30 +16,30 @@ interface ButtonStyle {
 
 export interface ButtonVariante {
     enabled: ButtonStyle;
-    desabled: ButtonStyle;
+    disabled: ButtonStyle;
 };
 
 const buttonPrimary: ButtonVariante = {
     enabled: {
         button: {
-            backgroundColor: COLORS.PRIMARY,
+            backgroundColor: theme.COLORS.PRIMARY,
         },
         title: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
         icon: {
-            color: COLORS.WHITE,
-        }
+            color: theme.COLORS.WHITE,
+        },
     },
-    desabled: {
+    disabled: {
         button: {
-            backgroundColor: COLORS.GRAY_100,
+            backgroundColor: theme.COLORS.GRAY_100,
         },
         title: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
         icon: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
     },
 };
@@ -51,26 +49,26 @@ const buttonOutline: ButtonVariante = {
         button: {
             backgroundColor: 'transparent',
             borderWidth: 2,
-            borderColor: COLORS.PRIMARY,
+            borderColor: theme.COLORS.PRIMARY,
         },
         title: {
-            color: COLORS.GRAY1,
+            color: theme.COLORS.GRAY1,
         },
         icon: {
-            color: COLORS.GRAY1,
-        }
+            color: theme.COLORS.GRAY1,
+        },
     },
-    desabled: {
+    disabled: {
         button: {
             backgroundColor: 'transparent',
             borderWidth: 2,
-            borderColor: COLORS.PRIMARY,
+            borderColor: theme.COLORS.PRIMARY,
         },
         title: {
-            color: COLORS.GRAY_100,
+            color: theme.COLORS.GRAY_100,
         },
         icon: {
-            color: COLORS.GRAY_100,
+            color: theme.COLORS.GRAY_100,
         },
     },
 };
@@ -78,24 +76,24 @@ const buttonOutline: ButtonVariante = {
 const buttonBlack: ButtonVariante = {
     enabled: {
         button: {
-            backgroundColor: COLORS.BLACK,
+            backgroundColor: theme.COLORS.BLACK,
         },
         title: {
-            color: COLORS.ORANGE_300,
+            color: theme.COLORS.ORANGE_300,
         },
         icon: {
-            color: COLORS.ORANGE_300,
-        }
+            color: theme.COLORS.ORANGE_300,
+        },
     },
-    desabled: {
+    disabled: {
         button: {
-            backgroundColor: COLORS.GRAY_100,
+            backgroundColor: theme.COLORS.GRAY_100,
         },
         title: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
         icon: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
     },
 };

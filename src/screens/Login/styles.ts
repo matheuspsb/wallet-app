@@ -6,15 +6,18 @@ export const Container = styled.View`
 `
 
 export const ContentHeader = styled.View`
+    width: 100%;
 
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    padding: ${RFValue(10)}px;
+    margin-left: -10px;
 `
 export const ContentBody = styled.View``
 
-export const ContentFooter = styled.View``
+export const ContentFooter = styled.View`
+    align-items: center;
+`
 
 export const ViewButton = styled.View`
     flex-direction: row;

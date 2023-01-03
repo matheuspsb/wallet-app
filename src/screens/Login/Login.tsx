@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { SafeAreaView, Text } from "react-native";
 import { useTheme } from "styled-components/native";
@@ -21,6 +21,15 @@ import {
 const Login: React.FC = () => {
 
     const { COLORS } = useTheme();
+
+    const [loading, setLoading] = useState(false)
+
+    function onPressButton() {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }
 
     return (
         <SafeAreaView>
@@ -46,27 +55,37 @@ const Login: React.FC = () => {
 
                     <Input
                         LeftIcon
-                        iconSize={25}
+                        iconSize={20}
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        secureTextEntry={false}
                         iconName='mail-outline'
-                        iconColor={COLORS.TEXTDARK}
+                        keyboardType="email-address"
                         placeholder="Digite seu e-mail"
                     />
                     <Input
                         LeftIcon
                         RightIcon
+                        iconSize={20}
+                        secureTextEntry
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        keyboardType="default"
                         iconName='lock-closed-outline'
                         placeholder="Digite sua senha"
                     />
 
                     <Button
                         title='Entrar'
-                        onPress={() => {}}
+                        variant="primary"
+                        onPress={onPressButton}
+                        style={{ marginBottom: 20 }}
                     />
 
                 </ContentBody>
 
                 <ContentFooter>
-
+                    <Text style={{ marginTop: 220 }}>Created by Matheus Paulo</Text>
                 </ContentFooter>
 
             </Container>

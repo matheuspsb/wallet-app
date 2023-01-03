@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Icon from '@expo/vector-icons/Ionicons';
 import { useTheme } from 'styled-components';
 
-import { TextInputProps } from 'react-native'
+import { TextInputProps, TouchableOpacity } from 'react-native'
 
 import { Container, InputContainer } from './styles'
 
@@ -12,11 +12,22 @@ interface InputProps {
     iconName?: any;
     iconSize?: number;
     iconColor?: string;
+    secureTextEntry?: boolean;
 }
 
-const Input: React.FC<InputProps & TextInputProps > = ({ RightIcon, LeftIcon, iconName, iconSize, iconColor, ...rest }) => {
+const Input: React.FC<InputProps & TextInputProps> = ({
+    RightIcon,
+    LeftIcon,
+    iconName,
+    iconSize,
+    iconColor,
+    secureTextEntry,
+    ...rest
+}) => {
 
     const { COLORS } = useTheme();
+
+    const [secury, setSecury] = useState(secureTextEntry)
 
     return (
         <Container>
@@ -25,24 +36,27 @@ const Input: React.FC<InputProps & TextInputProps > = ({ RightIcon, LeftIcon, ic
                 <Icon
                     name={iconName}
                     size={iconSize}
-                    color={iconColor || COLORS.TEXTDARK}
+                    color={iconColor || COLORS.GRAY2}
                     style={{ padding: 5 }}
                 />
             )}
 
             <InputContainer
                 {...rest}
+                secureTextEntry={secury}
+                underlineColorAndroid='transparent'
                 placeholderTextColor={COLORS.GRAY3}
-
             />
 
             {RightIcon && (
-                <Icon
-                    name={iconName}
-                    size={iconSize}
-                    color={iconColor || COLORS.TEXTDARK}
-                    style={{ padding: 5 }}
-                />
+                <TouchableOpacity onPress={() => setSecury(!secury)}>
+                    <Icon
+                        name={secury ? 'eye' : 'eye-off'}
+                        size={iconSize}
+                        color={iconColor || COLORS.GRAY2}
+                        style={{ padding: 5 }}
+                    />
+                </TouchableOpacity>
             )}
 
         </Container>

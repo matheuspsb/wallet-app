@@ -6,8 +6,8 @@ export const Button = styled(RectButton)`
     margin-bottom: 16px;
     margin-left: ${RFValue(10)}px;
 
-    width: ${RFValue(130)}px;
-    height: ${RFValue(60)}px;
+    width: ${RFValue(145)}px;
+    height: ${RFValue(50)}px;
 
     flex-direction: row;
     align-items: center;
