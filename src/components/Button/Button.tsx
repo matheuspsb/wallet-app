@@ -12,7 +12,7 @@ interface IButtonProps {
     iconName?: keyof typeof AntDesign.glyphMap;
     isLoading?: boolean;
     disabled?: boolean;
-    variant?: 'primary' | 'outline' | 'black';
+    variant?: 'primary' | 'outline' | 'black' | 'transparent';
     style?: TouchableOpacityProps['style'];
 }
 
