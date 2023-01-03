@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView, Text, KeyboardAvoidingView } from "react-native";
 import { useTheme } from "styled-components/native";
 
 import Input from '../../components/Input/Input'
@@ -38,73 +38,78 @@ const Login: React.FC = () => {
     }
 
     return (
-        <SafeAreaView>
-            <Container>
+        <KeyboardAvoidingView
+            behavior="position"
+            enabled
+        >
+            <SafeAreaView>
+                <Container>
 
-                <ContentHeader>
+                    <ContentHeader>
 
-                    <Title>Seja bem vindo(a) {"\n"} a Wallet App</Title>
+                        <Title>Seja bem vindo(a) {"\n"} a Wallet App</Title>
 
-                    <Description>Entrar com rede sociais</Description>
+                        <Description>Entrar com rede sociais</Description>
 
-                    <ViewButton>
+                        <ViewButton>
 
-                        <ButtonSocialGoogle title="Google" />
+                            <ButtonSocialGoogle title="Google" />
 
-                        <ButtonSocialFacebook title="Facebook" iconName="facebook" />
+                            <ButtonSocialFacebook title="Facebook" iconName="facebook" />
 
-                    </ViewButton>
+                        </ViewButton>
 
-                </ContentHeader>
+                    </ContentHeader>
 
-                <ContentBody>
+                    <ContentBody>
 
-                    <Input
-                        LeftIcon
-                        iconSize={20}
-                        autoCorrect={false}
-                        autoCapitalize="none"
-                        secureTextEntry={false}
-                        iconName='mail-outline'
-                        keyboardType="email-address"
-                        placeholder="Digite seu e-mail"
-                    />
-                    <Input
-                        LeftIcon
-                        RightIcon
-                        iconSize={20}
-                        secureTextEntry
-                        autoCorrect={false}
-                        autoCapitalize="none"
-                        keyboardType="default"
-                        iconName='lock-closed-outline'
-                        placeholder="Digite sua senha"
-                    />
+                        <Input
+                            LeftIcon
+                            iconSize={20}
+                            autoCorrect={false}
+                            autoCapitalize="none"
+                            secureTextEntry={false}
+                            iconName='mail-outline'
+                            keyboardType="email-address"
+                            placeholder="Digite seu e-mail"
+                        />
+                        <Input
+                            LeftIcon
+                            RightIcon
+                            iconSize={20}
+                            secureTextEntry
+                            autoCorrect={false}
+                            autoCapitalize="none"
+                            keyboardType="default"
+                            iconName='lock-closed-outline'
+                            placeholder="Digite sua senha"
+                        />
 
-                    <ContentForgotPassword>
-                        <ContentButtonForgotPassword onPress={() => {}}>
-                            <ContentTitleForgotPassword>Recuperar Senha</ContentTitleForgotPassword>
-                        </ContentButtonForgotPassword>
-                    </ContentForgotPassword>
+                        <ContentForgotPassword>
+                            <ContentButtonForgotPassword onPress={() => { }}>
+                                <ContentTitleForgotPassword>Recuperar Senha</ContentTitleForgotPassword>
+                            </ContentButtonForgotPassword>
+                        </ContentForgotPassword>
 
-                    <Button
-                        title='Entrar'
-                        variant="primary"
-                        onPress={onPressButton}
-                        style={{ marginBottom: 20 }}
-                    />
+                        <Button
+                            title='Entrar'
+                            variant="primary"
+                            onPress={onPressButton}
+                            style={{ marginBottom: 20 }}
+                        />
 
-                </ContentBody>
+                    </ContentBody>
 
-                <ContentFooter>
-                    <ButtonSingup onPress={() => {}}>
-                        <TitleButtonSignUp1>Não tem cadastro ainda?</TitleButtonSignUp1>
-                        <TitleButtonSignUp2>Cadastre-se</TitleButtonSignUp2>
-                    </ButtonSingup>
-                </ContentFooter>
+                    <ContentFooter>
+                        <ButtonSingup onPress={() => { }}>
+                            <TitleButtonSignUp1>Não tem cadastro ainda?</TitleButtonSignUp1>
+                            <TitleButtonSignUp2>Cadastre-se</TitleButtonSignUp2>
+                        </ButtonSingup>
+                    </ContentFooter>
 
-            </Container>
-        </SafeAreaView>
+                </Container>
+            </SafeAreaView>
+        </KeyboardAvoidingView>
     );
 }
 
